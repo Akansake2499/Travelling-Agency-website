@@ -1,0 +1,48 @@
+/* styles.css */
+
+.hero-bg {
+  position: relative;
+}
+
+.hero-bg > div:first-child {
+  background-image: url('https://picsum.photos/id/870/1920/1080');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px -15px rgb(14 165 233 / 0.3);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0ea5e9;
+  transition: width 0.3s ease;
+}
+.nav-link:hover:after { width: 100%; }
+
+/* Filter button active state */
+.filter-btn.active {
+  background-color: #0ea5e9 !important;
+  color: white !important;
+}
+
+.modal {
+  animation: modalPop 0.3s ease forwards;
+}
+@keyframes modalPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
